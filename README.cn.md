@@ -107,6 +107,21 @@ prismjs:
   enable: false
 ```
 
+## 语言
+
+目前支持下列语言：
+
+- en：英语（默认）
+- zh-cn：简体中文
+- zh-tw：繁体中文
+- ja：日语
+
+编辑`/config.yml`以更改语言：
+
+```yaml
+language: zh-cn
+```
+
 ## 定制
 
 通过编辑`/theme/onion/_config.yml`个性化你的博客。

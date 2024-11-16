@@ -1,0 +1,40 @@
+Header:
+  Home: ホームページ
+  Archives: アーカイブ
+  Gallery: ギャラリー
+  About: 情報
+  Search: 検索
+
+Footer:
+  Home: ホームページ
+  Github: Github
+  Onion: Onion
+  FAQs: FAQs
+  About: 情報
+
+Infobar:
+  Details: 詳しく知る
+  Excerpt: まとめ
+  Catalog: 目録
+  Categories: カテゴリ
+  Tags: タグ
+
+Info_modal:
+  Title: 個人情報
+
+Search_modal:
+  Search: 検索
+  Placeholder: キーワード...
+  No_result: これ以上の結果はありません
+
+Sidebar:
+  Author: 作者
+  Contact: 連絡
+
+Index:
+  Uncategorized: 未分類
+  No_excerpt: 抜粋が見つかりません
+  More: 続きを読む
+
+Post:
+  No_info: 情報なし

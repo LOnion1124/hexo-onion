@@ -1,0 +1,65 @@
+<nav class="py-2 border-bottom bg-light">
+  <div class="container d-flex flex-wrap">
+    <ul class="nav me-auto">
+      <!-- Index -->
+      <li class="nav-item px-2">
+        <% if(is_home()) { %>
+        <a class="nav-link link-secondary" href="/"><%- __('Header.Home') %></a>
+        <% } else { %>
+        <a class="nav-link link-body-emphasis" href="/"><%- __('Header.Home') %></a>
+        <% } %>
+      </li>
+
+      <!-- Index -->
+      <li class="nav-item px-2">
+        <% if(is_archive()) { %>
+        <a class="nav-link link-secondary" href="<%- url_for(config.archive_dir) %>"><%- __('Header.Archives') %></a>
+        <% } else { %>
+        <a class="nav-link link-body-emphasis" href="<%- url_for(config.archive_dir) %>"><%- __('Header.Archives') %></a>
+        <% } %>
+      </li>
+
+      <!-- Gallery -->
+      <% if (theme.header.gallery) { %>
+      <li class="nav-item px-2">
+        <% if(is_current('/gallery')) { %>
+        <a class="nav-link link-secondary" href="/gallery"><%- __('Header.Gallery') %></a>
+        <% } else { %>
+        <a class="nav-link link-body-emphasis" href="/gallery"><%- __('Header.Gallery') %></a>
+        <% } %>
+      </li>
+      <% } %>
+
+      <!-- About -->
+      <% if (theme.header.about) { %>
+      <li class="nav-item px-2">
+        <% if(is_current('/about')) { %>
+        <a class="nav-link link-secondary" href="/about"><%- __('Header.About') %></a>
+        <% } else { %>
+        <a class="nav-link link-body-emphasis" href="/about"><%- __('Header.About') %></a>
+        <% } %>
+      </li>
+      <% } %>
+    </ul>
+    <ul class="nav">
+      <li class="nav-item"><a href="#" data-bs-toggle="modal" data-bs-target="#infoModal" class="nav-link link-dark px-2"><i class="bi bi-envelope-at"></i></a></li>
+      <li class="nav-item"><a href="<%= theme.header.github %>" class="nav-link link-dark px-2"><i class="bi bi-github"></i></a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="py-3 mb-4 border-bottom shadow-sm">
+  <div class="container d-flex flex-wrap justify-content-center">
+    <a href="/" class="d-flex align-items-center mb-0 me-auto text-dark text-decoration-none">
+      <span class="bi me-2" width="40" height="32"><img src="<%- url_for(theme.header.logo) %>" alt="" height="32" class="nofancybox"></span>
+      <span class="fs-4 d-none d-md-block"><%= theme.header.title %></span>
+    </a>
+    <% if (theme.search.enable) { %>
+    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#searchModal">
+      <i class="bi bi-search"></i>
+      <%- __('Header.Search') %>
+    </button>
+    <%- partial('_partial/search_modal') %>
+    <% } %>
+  </div>
+</header>

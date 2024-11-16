@@ -109,6 +109,21 @@ prismjs:
   enable: false
 ```
 
+## Language
+
+Currently supported languages:
+
+- en: English (default)
+- zh-cn: Simplified Chinese
+- zh-tw: Traditional Chinese
+- ja: Japanese
+
+To change language, edit `/config.yml`:
+
+```yaml
+language: zh-cn
+```
+
 ## Customize
 
 Customize your blog website by editing `/theme/onion/_config.yml`.

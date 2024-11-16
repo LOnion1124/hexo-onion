@@ -1,0 +1,49 @@
+<div class="row">
+  <div class="col-md-3 offset-md-1 d-none d-md-block">
+    <%- partial('_partial/infobar.ejs') %>
+  </div>
+
+  <div class="col col-md-7">
+    <!-- 归档 -->
+    <div class="archive-container">
+      <% var lastAlphabet = '';
+      page.posts.forEach(post => {
+        if (typeof post.alphabet === 'undefined') post.alphabet = '_';
+        if (lastAlphabet !== post.alphabet) {
+          if (lastAlphabet != '') { %></div>
+  </div><% }
+          lastAlphabet = post.alphabet; %>
+  <div class="border rounded overflow-hidden shadow-sm mb-4 p-4 pb-3">
+    <h3 class="words-title"><i class="bi bi-diagram-2"></i><%= lastAlphabet %></h3>
+    <div class="list-group list-group-flush">
+      <% } %>
+      <div class="d-flex justify-content-between list-group-item">
+        <div>
+          <span>
+            <% if (post.categories.length > 0) {
+              post.categories.each(category=> { %>
+            <span class="badge bg-primary align-text-bottom"><%- category.name %></span>
+            <% });
+            } else { %>
+            <span class="badge bg-primary align-text-bottom"><%- __('Index.Uncategorized') %></span>
+            <% } %>
+
+          </span>
+          <a href="<%= url_for(post.path) %>" class="stretched-link link-dark link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover"><%= post.title %></a>
+        </div>
+        <small class="text-muted fst-italic ms-auto d-none d-lg-block"><%- date(post.date) %></small>
+      </div>
+      <% }) %>
+    </div>
+  </div>
+
+  <div>
+    <% if (page.prev){ %>
+    <a href="<%- url_for(page.prev_link) %>" style="float: left;"><button class="btn btn-outline-primary" type="button"><i class="bi bi-chevron-double-left"></i></button></a>
+    <% } %>
+    <% if (page.next){ %>
+    <a href="<%- url_for(page.next_link) %>" style="float: right;"><button class="btn btn-outline-primary" type="button"><i class="bi bi-chevron-double-right"></i></button></a>
+    <% } %>
+  </div>
+</div>
+</div>

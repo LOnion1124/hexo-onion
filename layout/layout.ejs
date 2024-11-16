@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="<%= config.language %>">
+
+<!-- head -->
+<%- partial('_partial/head.ejs') %>
+
+<body>
+  <div class="d-flex flex-column min-vh-100">
+    <div><%- partial('_partial/header.ejs') %></div>
+
+    <% if (theme.sidebar.enable) { %>
+    <div><%- partial('_partial/sidebar.ejs') %></div>
+    <% } %>
+    
+    <div class="px-2 px-md-0">
+      <%- body %>
+    </div>
+
+    <div class="mt-auto"><%- partial('_partial/footer.ejs') %></div>
+  </div>
+</body>
+
+</html>

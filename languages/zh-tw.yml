@@ -1,0 +1,40 @@
+Header:
+  Home: 主頁
+  Archives: 歸檔
+  Gallery: 陳列
+  About: 關於
+  Search: 搜索
+
+Footer:
+  Home: 主頁
+  Github: Github
+  Onion: Onion
+  FAQs: FAQs
+  About: 關於
+
+Infobar:
+  Details: 更多信息
+  Excerpt: 摘要
+  Catalog: 目錄
+  Categories: 分類
+  Tags: 標簽
+
+Info_modal:
+  Title: 個人信息
+
+Search_modal:
+  Search: 搜索
+  Placeholder: 關鍵詞……
+  No_result: 暫無更多結果
+
+Sidebar:
+  Author: 作者
+  Contact: 聯絡
+
+Index:
+  Uncategorized: 未分類
+  No_excerpt: 暫無摘要
+  More: 閲讀更多
+
+Post:
+  No_info: 暫無信息

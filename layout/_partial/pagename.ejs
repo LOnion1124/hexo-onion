@@ -1,0 +1,15 @@
+<!-- 分类名-->
+<% if (is_category()) { %>
+<h3 class="pb-3 mb-4 fw-light border-bottom">
+  <i class="bi bi-folder"></i>
+  <%- page.category %>
+</h3>
+<% } %>
+
+<!-- 标签名-->
+<% if (is_tag()) { %>
+<h3 class="pb-3 mb-4 fw-light border-bottom">
+  <i class="bi bi-tags"></i>
+  <%- page.tag %>
+</h3>
+<% } %>

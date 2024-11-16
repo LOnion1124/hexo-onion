@@ -1,0 +1,62 @@
+<div class="position-sticky" style="top: 2rem;">
+
+  <!-- 头像框 -->
+  <% if (is_post() == false) { %>
+  <div class="p-4 mb-3 bg-light rounded text-center shadow-sm">
+    <div class="p-2">
+      <img src="<%- url_for(theme.infobar.avatar) %>" class="rounded-circle img-fluid nofancybox" alt="" width="128">
+    </div>
+    <h2 class="fw-normal"><%= theme.infobar.title %></h2>
+    <p><%= theme.infobar.info %></p>
+    <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#infoModal">
+      <%- __('Infobar.Details') %>
+      <i class="bi bi-chevron-double-right"></i>
+    </button>
+  </div>
+  <% } %>
+  
+
+  <!-- 文章页 -->
+  <% if (is_post()) { %>
+  <!-- 摘要 -->
+  <% if (page.excerpt || page.cover) { %>
+  <div class="p-2 mb-3 bg-light rounded text-center shadow-sm">
+    <% if (page.cover) { %>
+      <div class="pb-2"><img src="<%- url_for(page.cover) %>" class="img-fluid rounded nofancybox"></div>
+    <% } %>
+    <% if (page.excerpt) { %>
+      <div class="text-muted fs-4 border-bottom pb-1 mb-2"><i class="bi bi-blockquote-left"></i>&nbsp;<%- __('Infobar.Excerpt') %></div>
+      <div class="p-2 text-muted"><%- page.excerpt %></div>
+    <% } %>
+  </div>
+  <% } %>
+  <!-- 目录 -->
+  <% if (page.toc) { %>
+    <div class="p-2 mb-3 border rounded shadow-sm">
+      <div class="text-center fs-4 text-muted border-bottom pb-1 mb-2"><i class="bi bi-bookmark-dash"></i>&nbsp;<%- __('Infobar.Catalog') %></div>
+      <div id="toc" class="px-2"></div>
+      <%- js('js/toc') %>
+    </div>
+  <% } %>
+  <% } %>
+
+  <hr>
+
+  <div class="p-4">
+    <h4 class="fst-italic"><i class="bi bi-folder"></i>&nbsp;<%- __('Infobar.Categories') %></h4>
+    <div class="mt-2 px-2 pt-2"><%- list_categories(site.categories, {class: 'site-category', depth: -1}) %></div>
+  </div>
+
+  <hr>
+
+  <div class="p-4">
+    <h4 class="fst-italic"><i class="bi bi-tags"></i>&nbsp;<%- __('Infobar.Tags') %></h4>
+    <div class="mt-2 px-2 pt-2"><%- list_tags(site.tags, {class: 'site-tag', style: false, separator: ' '}) %></div>
+  </div>
+
+  <hr>
+</div>
+
+<%- partial('_partial/info_modal') %>
+
+<%- js('js/infobar.js') %>

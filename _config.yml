@@ -1,0 +1,26 @@
+meta:
+  title: "My Blog | Onion"
+  favicon: /img/favicon.ico
+
+header:
+  logo: /img/logo.png
+  title: "Welcome to my blog | Onion"
+  github: https://github.com/
+  gallery: false
+  about: false
+
+search:
+  enable: true
+
+infobar:
+  avatar: /img/avatar.png
+  title: "Onion"
+  info: "Onion is a simple and elegant Hexo theme."
+
+info_modal:
+  content: "Contact me at mymail@mail.com"
+
+sidebar:
+  enable: false
+  title: "Sidebar | Onion"
+  content: "Under construction..."

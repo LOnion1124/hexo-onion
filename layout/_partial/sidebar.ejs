@@ -1,0 +1,63 @@
+<!-- 侧边按钮 -->
+<button class="btn btn-outline-primary d-none d-md-block" type="button" style="position: fixed;" data-bs-toggle="offcanvas" data-bs-target="#offcanvas">
+  <i class="bi bi-arrow-bar-right"></i>
+</button>
+
+<!-- 侧边栏 -->
+<div class="offcanvas offcanvas-start d-flex flex-column flex-shrink-0 p-3 text-bg-light" data-bs-scroll="true" tabindex="-1" id="offcanvas">
+  <div class="offcanvas-header">
+    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+      <span class="fs-4">
+        <%= theme.sidebar.title %>
+      </span>
+    </a>
+    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="offcanvas"><i class="bi bi-arrow-bar-left"></i></button>
+  </div>
+  <hr>
+  <div class="offcanvas-body">
+    <!-- <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a href="#" class="nav-link text-dark">
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link text-dark">
+          Dashboard
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link text-dark">
+          Orders
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link text-dark">
+          Products
+        </a>
+      </li>
+      <li>
+        <a href="#" class="nav-link text-dark">
+          Customers
+        </a>
+      </li>
+    </ul> -->
+    <p><%= theme.sidebar.content %></p>
+  </div>
+  <hr>
+  <div class="dropdown">
+    <a href="#" class="d-flex align-items-center text-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+      <img src="<%- url_for(theme.avatar_dir) %>" alt="" width="32" height="32" class="rounded-circle me-2 nofancybox">
+      <strong><%- __('Sidebar.Author') %></strong>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-light text-small shadow">
+      <li><a class="dropdown-item" href="#">Github</a></li>
+      <li><a class="dropdown-item" href="#">Bilibili</a></li>
+      <li><a class="dropdown-item" href="#">NEC Music</a></li>
+      <li>
+        <hr class="dropdown-divider">
+      </li>
+      <li><a class="dropdown-item" href="#"><%- __('Sidebar.Contact') %></a></li>
+    </ul>
+  </div>
+</div>

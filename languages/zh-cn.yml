@@ -1,0 +1,40 @@
+Header:
+  Home: 主页
+  Archives: 归档
+  Gallery: 陈列
+  About: 关于
+  Search: 搜索
+
+Footer:
+  Home: 主页
+  Github: Github
+  Onion: Onion
+  FAQs: FAQs
+  About: 关于
+
+Infobar:
+  Details: 更多信息
+  Excerpt: 摘要
+  Catalog: 目录
+  Categories: 分类
+  Tags: 标签
+
+Info_modal:
+  Title: 个人信息
+
+Search_modal:
+  Search: 搜索
+  Placeholder: 关键词……
+  No_result: 暂无更多结果
+
+Sidebar:
+  Author: 作者
+  Contact: 联络
+
+Index:
+  Uncategorized: 未分类
+  No_excerpt: 暂无摘要
+  More: 阅读更多
+
+Post:
+  No_info: 暂无信息

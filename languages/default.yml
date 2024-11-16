@@ -1,0 +1,40 @@
+Header:
+  Home: Home
+  Archives: Archives
+  Gallery: Gallery
+  About: About
+  Search: Search
+
+Footer:
+  Home: Home
+  Github: Github
+  Onion: Onion
+  FAQs: FAQs
+  About: About
+
+Infobar:
+  Details: View details
+  Excerpt: Excerpt
+  Catalog: Catalog
+  Categories: Categories
+  Tags: Tags
+
+Info_modal:
+  Title: Personal information
+
+Search_modal:
+  Search: Search
+  Placeholder: Keyword...
+  No_result: No more results
+
+Sidebar:
+  Author: Author
+  Contact: Contact
+
+Index:
+  Uncategorized: Uncategarized
+  No_excerpt: Excerpt not found
+  More: more
+
+Post:
+  No_info: No_info
